@@ -48,3 +48,10 @@ Temporary Items
 
 # Visual Studio Code
 .vscode/*
+
+# tsd
+tsd.d.ts
+tsd.json
+
+# tsd-node
+node/
