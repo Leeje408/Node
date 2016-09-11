@@ -1,0 +1,22 @@
+{
+  "name": "node-test",
+  "version": "1.0.0",
+  "description": "Node.js joy",
+  "main": "typings/js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leeje408/Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leeje408/Node/issues"
+  },
+  "homepage": "https://github.com/Leeje408/Node#readme",
+  "dependencies": {
+    "formidable": "^1.0.17"
+  }
+}

@@ -55,3 +55,6 @@ tsd.json
 
 # tsd-node
 node/
+
+# node_modules
+node_modules/
