@@ -18,5 +18,9 @@
   "homepage": "https://github.com/Leeje408/Node#readme",
   "dependencies": {
     "formidable": "^1.0.17"
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-google": "^0.6.0"
   }
 }
