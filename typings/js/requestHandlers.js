@@ -33,16 +33,17 @@ function upload (request, response) {
   console.log("Request handler 'upload' was called.")
   var form = new formidable.IncomingForm()
   form.uploadDir = 'tmp' // 指定上传文件目录，解决跨分区重命名
-  form.parse(request, function (error, fields, files) {
-    console.log('parsing done')
-    fs.renameSync(files.upload.path, './tmp/test.png')
-    response.writeHead(200, { 'Content-Type': 'text/html' })
-    response.write('received image:<br/>')
-    response.write("<img src='/show' />")
-    response.end()
-  })
+    /* eslint-disable */
+    form.parse(request, function (error, fields, files) {
+        console.log('parsing done')
+        fs.renameSync(files.upload.path, './tmp/test.png')
+        response.writeHead(200, { 'Content-Type': 'text/html' })
+        response.write('received image:<br/>')
+        response.write("<img src='/show' />")
+        response.end()
+    })
 }
-
+/* eslint-enable */
 function show (request, response) {
   fs.readFile('./tmp/test.png', 'binary', function (error, file) {
     if (error) {
