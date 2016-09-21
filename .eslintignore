@@ -1,2 +1,2 @@
-# ignore requestHandlers.js
-typings\js\requestHandlers.js
+# ignore package.json
+./package.json

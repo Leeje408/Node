@@ -61,3 +61,7 @@ node_modules/
 
 # log
 *.log
+
+# ignore sass
+.sass-cache/
+typings/js/view/css/*.map
