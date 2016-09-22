@@ -64,4 +64,4 @@ node_modules/
 
 # ignore sass
 .sass-cache/
-typings/js/view/css/*.map
+*.css.map
