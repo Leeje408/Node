@@ -3,14 +3,15 @@
 // var querystring = require('querystring'),
 var fs = require('fs')
 var formidable = require('formidable')
+var rootpath = require('./common/path.json').root
 
 function start (request, response) {
   console.log('Start.')
   var body = ''
-  fs.readFile('./typings/js/view/start.html', 'utf8', function (err, data) {
+  fs.readFile(rootpath + './view/start.html', 'utf8', function (err, data) {
     if (err) {
       console.log(err + '\n')
-      fs.readFile('./typings/js/view/404.html', 'utf8', function (err, data) {
+      fs.readFile(rootpath + './view/404.html', 'utf8', function (err, data) {
         if (err) {
           console.log(err + '\n')
         } else {
@@ -42,8 +43,9 @@ function upload (request, response) {
         response.write("<img src='/show' />")
         response.end()
     })
+    /* eslint-enable */
 }
-/* eslint-enable */
+
 function show (request, response) {
   fs.readFile('./tmp/test.png', 'binary', function (error, file) {
     if (error) {
