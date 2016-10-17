@@ -25,6 +25,7 @@
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
     "gulp": "^3.9.1",
+    "mysql": "^2.11.1",
     "webpack": "^1.13.2"
   }
 }

@@ -60,6 +60,21 @@ function show (request, response) {
   })
 }
 
+function mysqltest (request, response) {
+  var mysqlt = require('./common/db')
+  var sql = 'SELECT * FROM user WHERE id = 1'
+  mysqlt.query(sql, function (ret) {
+    if (ret === []) {
+      response.writeHead(200, { 'Content-Type': 'text/html' })
+      response.end('There is Nothing had Found.')
+    } else {
+      response.writeHead(200, { 'Content-Type': 'text/html' })
+      response.end(JSON.stringify(ret))
+    }
+  })
+}
+
 exports.start = start
 exports.upload = upload
 exports.show = show
+exports.mysqltest = mysqltest

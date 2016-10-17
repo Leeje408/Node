@@ -9,5 +9,6 @@ handle['/'] = requestHandlers.start
 handle['/start'] = requestHandlers.start
 handle['/upload'] = requestHandlers.upload
 handle['/show'] = requestHandlers.show
+handle['/mysqltest'] = requestHandlers.mysqltest
 
 server.start(router.route, handle)
