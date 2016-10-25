@@ -34,16 +34,16 @@ function upload (request, response) {
   console.log("Request handler 'upload' was called.")
   var form = new formidable.IncomingForm()
   form.uploadDir = 'tmp' // 指定上传文件目录，解决跨分区重命名
-    /* eslint-disable */
-    form.parse(request, function (error, fields, files) {
-        console.log('parsing done')
-        fs.renameSync(files.upload.path, './tmp/test.png')
-        response.writeHead(200, { 'Content-Type': 'text/html' })
-        response.write('received image:<br/>')
-        response.write("<img src='/show' />")
-        response.end()
-    })
-    /* eslint-enable */
+  /* eslint-disable */
+  form.parse(request, function (error, fields, files) {
+    console.log('parsing done')
+    fs.renameSync(files.upload.path, './tmp/test.png')
+    response.writeHead(200, { 'Content-Type': 'text/html' })
+    response.write('received image:<br/>')
+    response.write("<img src='/show' />")
+    response.end()
+  })
+  /* eslint-enable */
 }
 
 function show (request, response) {
@@ -74,7 +74,14 @@ function mysqltest (request, response) {
   })
 }
 
+function redistest (request, response) {
+  var cache = require('./common/redis_cache')
+  response.writeHead(200, {'Content-Type': 'text/html'})
+  response.end(JSON.stringify(cache.test()))
+}
+
 exports.start = start
 exports.upload = upload
 exports.show = show
 exports.mysqltest = mysqltest
+exports.redistest = redistest

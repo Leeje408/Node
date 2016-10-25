@@ -1,5 +1,5 @@
 var mysql = require('mysql')
-var conConfig = require('./connect.json')
+var conConfig = require('./config.json')
 var errCode = require('./../errcode.js')
 
 var connection

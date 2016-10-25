@@ -10,7 +10,7 @@ var errcode = {
 
 // Except a ErrCode to GetErrMessage
 function getErrMessage (code) {
-  if (!code) throw new Error(this(1001))
+  if (!code) throw new Error(getErrMessage(1001))
   return errcode[code]
 }
 

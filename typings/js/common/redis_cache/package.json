@@ -1,0 +1,4 @@
+{
+  "name": "redis_cache",
+  "main": "./index.js"
+}
